@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 /**
  *
@@ -25,7 +26,27 @@ class _CommunityCircleScreenState extends State<CommunityCircleScreen> {
           centerTitle: true,
         ),
         body: new Center(
-          child: null,
+          child: CupertinoAlertDialog(
+            title: Text("提示"),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text("是否要删除？"),
+                  Text("删除后无法恢复！")
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              CupertinoDialogAction(
+                child: Text("确认"),
+                onPressed: (){},
+              ),
+              CupertinoDialogAction(
+                child: Text("取消"),
+                onPressed: (){},
+              )
+            ],
+          ),
         ),
       ),
     );
