@@ -15,16 +15,16 @@ class IndexSwiper extends StatefulWidget {
 
 class _IndexSwiperState extends State<IndexSwiper> {
 
-  List<Image> swipers = new List();
+  List<String> swipers = new List();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    swipers.add(Image.asset("images/index_swiper/swiper_01.jpg",fit: BoxFit.fill,));
-    swipers.add(Image.asset("images/index_swiper/swiper_02.jpg",fit: BoxFit.fill));
-    swipers.add(Image.asset("images/index_swiper/swiper_03.jpg",fit: BoxFit.fill));
+    swipers.add("images/index_swiper/swiper_01.jpg");
+    swipers.add("images/index_swiper/swiper_02.jpg");
+    swipers.add("images/index_swiper/swiper_03.jpg");
   }
 
   @override
@@ -49,7 +49,9 @@ class _IndexSwiperState extends State<IndexSwiper> {
   }
 
   Widget _swiperBuilder(BuildContext context, int index) {
-    return swipers[index];
+    return Image.asset(swipers[index],
+      fit: BoxFit.fill,
+    );
   }
 }
 

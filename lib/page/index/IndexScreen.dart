@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'IndexSwiper.dart';
 import 'IndexAppBar.dart';
 import 'IndexMenu.dart';
+import 'IndexHotShop.dart';
 /**
  * 首页
  */
@@ -26,15 +27,13 @@ class _IndexScreenState extends State<IndexScreen> {
     return new MaterialApp(
       home: new Scaffold(
         appBar:new IndexAppBar().createAppBar(),
-        body: Container(
-          child: Column(
+        body: ListView(
             children: <Widget>[
               new IndexSwiper(),
-              new IndexMenu()
+              new IndexMenu(),
+              new IndexHotShop()
             ],
           ),
-        )
-
       ),
     );
   }

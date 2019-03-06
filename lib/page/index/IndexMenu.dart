@@ -69,6 +69,7 @@ class _IndexMenuState extends State<IndexMenu> {
     return Container(
       margin:EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
       color: Colors.white,
+      height: 170.0,
       child: buildGrid()
     );
   }
@@ -92,10 +93,12 @@ class _IndexMenuState extends State<IndexMenu> {
   Widget buildGrid(){
     return GridView.count(
       shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       crossAxisCount: 4,
       //padding: const EdgeInsets.all(5.0),
       mainAxisSpacing: 0.0,
       crossAxisSpacing: 0.0,
+      childAspectRatio: 5/4,
       children: _buildGridTitleList(),
     );
   }
@@ -111,6 +114,7 @@ class _IndexMenuState extends State<IndexMenu> {
   Container _buildGridContainer(int index){
     return Container(
       alignment: Alignment.center,
+      //color:  Colors.red,
       child: Container(
         height: 70.0,
         child: Column(
