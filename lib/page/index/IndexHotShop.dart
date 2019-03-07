@@ -131,10 +131,9 @@ class _IndexHotShopState extends State<IndexHotShop> {
                         ),
                       ),
                       new ClipOval(
-                        child: new FadeInImage.assetNetwork(
-                          placeholder: "",//预览图
+                        child: Image.network(
+                          hotShops[index].storeImage,
                           fit: BoxFit.fitWidth,
-                          image:hotShops[index].storeImage,
                           width: 40.0,
                           height: 40.0,
                         ),

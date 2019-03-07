@@ -3,6 +3,7 @@ import 'IndexSwiper.dart';
 import 'IndexAppBar.dart';
 import 'IndexMenu.dart';
 import 'IndexHotShop.dart';
+import 'IndexMessage.dart';
 /**
  * 首页
  */
@@ -31,6 +32,7 @@ class _IndexScreenState extends State<IndexScreen> {
             children: <Widget>[
               new IndexSwiper(),
               new IndexMenu(),
+              new IndexMessage(),
               new IndexHotShop()
             ],
           ),
